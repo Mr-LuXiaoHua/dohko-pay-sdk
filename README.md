@@ -12,7 +12,7 @@
 | /pay/refundquery   | 退款查询  |
 | /pay/downloadbill  | 下载对账单|
 
-微信有些接口需要证书才能请求，建议将证书转换成base64字符串：
+微信有些接口需要证书才能请求，建议将证书转换成base64字符串，便于储存和容器化部署
 ```java
 String filePath = "E:/certs/apiclient_cert.p12";
 String base64String = IoUtils.file2Base64String(filePath);
