@@ -115,7 +115,7 @@ System.out.println("证书内容："+ base64String);
         // 方式一：设置证书所在路径
         // wechatPayConfig.setCertPath("E:/certs/apiclient_cert.p12");
         // 方式二：设置证书内容
-        wechatPayConfig.setCertBase64Content("MIIKmgIBAzCCCmQGCSqGSIb3DQEHAaCCClUEggpRMIIKTTCCBM8GCSqGSIb3DQEHBqCCBMAwggS8AgEAMIIEtQYJKoZIhvcNAQcBMBwGCiqGSIb3DQEMAQYwDgQIje43PijTmdUCAggAgIIEiGyPh1boQb4ex0NBY0Who4JxCe4/cbtxYxZncucun0zD+wSk7L3OG7l1l86ahtqvV...");
+        wechatPayConfig.setCertBase64Content("MIIKmgIBAzCCCmQGCSq...");
              
         wechatPayConfig.setSignTypeEnum(SignTypeEnum.MD5);
 
