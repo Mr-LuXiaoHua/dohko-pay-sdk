@@ -13,6 +13,7 @@
 | /pay/downloadbill  | 下载对账单|  WechatPay.downloadBill()|
 
 微信支付有些接口需要证书才能请求，建议将证书转换成base64字符串，便于储存和容器化部署
+
 dohko-pay-sdk 支持两种方式配置微信支付证书：文件路径方式 和 Base64字符串方式
 ```java
 String filePath = "E:/certs/apiclient_cert.p12";
