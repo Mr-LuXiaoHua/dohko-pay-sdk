@@ -3,6 +3,7 @@ package com.dohko.pay.sdk.wechat;
 import com.dohko.pay.enums.SignTypeEnum;
 import com.dohko.pay.exception.PayException;
 import com.dohko.pay.util.HttpUtils;
+import com.dohko.pay.util.IoUtils;
 import com.dohko.pay.util.SignUtils;
 import com.dohko.pay.util.XmlUtils;
 import org.apache.commons.codec.binary.Base64;
@@ -118,6 +119,15 @@ public class WechatPay {
         if (!useCert) {
             result = HttpUtils.post(url, xmlReqData, connectTimeout, readTimeout);
         } else {
+
+            if (StringUtils.isBlank(wechatPayConfig.getCertBase64Content()) && StringUtils.isBlank(wechatPayConfig.getCertPath())) {
+                throw new PayException("微信支付证书未配置");
+            }
+            String certBase64Content = wechatPayConfig.getCertBase64Content();
+            if (StringUtils.isBlank(certBase64Content)) {
+                certBase64Content = IoUtils.file2Base64String(wechatPayConfig.getCertPath());
+            }
+
             SSLContext sslContext = getSSLContext(wechatPayConfig.getCertBase64Content(), wechatPayConfig.getCertPassword());
             result = HttpUtils.post(url, xmlReqData, sslContext,connectTimeout, readTimeout);
         }
