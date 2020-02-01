@@ -28,7 +28,7 @@ System.out.println("证书内容："+ base64String);
 #### 微信支付
 > 以下案例商户id、商户号、密钥均为虚构，使用时请替换
 ```java
-/**
+    /**
      * 将证书转换成base64字符串
      */
     @Test
