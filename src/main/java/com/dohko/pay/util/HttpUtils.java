@@ -7,6 +7,7 @@ import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.DefaultHttpRequestRetryHandler;
 import org.apache.http.impl.client.HttpClients;
@@ -52,17 +53,16 @@ public class HttpUtils {
             List<NameValuePair> paramList = getNameValuePairs(params);
             httPost.setEntity(new UrlEncodedFormEntity(paramList, StandardCharsets.UTF_8));
         }
-        return post(httPost);
+
+        CloseableHttpClient closeableHttpClient = getCloseableHttpClient();
+        return post(closeableHttpClient, httPost);
     }
 
 
-    private static String post(HttpPost httpPost) {
+    private static String post(CloseableHttpClient closeableHttpClient, HttpPost httpPost) {
         String result = null;
-
-        CloseableHttpClient closeableHttpClient = null;
         CloseableHttpResponse closeableHttpResponse = null;
         try {
-            closeableHttpClient = getCloseableHttpClient();
             closeableHttpResponse = closeableHttpClient.execute(httpPost);
             HttpEntity httpEntity = closeableHttpResponse.getEntity();
             result = EntityUtils.toString(httpEntity, StandardCharsets.UTF_8);
@@ -126,5 +126,25 @@ public class HttpUtils {
         }
         return nameValuePairs;
     }
+
+
+
+    public static String post(String url, String data, SSLContext sslContext, int connectTimeout, int readTimeout) {
+        CloseableHttpClient closeableHttpClient = null;
+        if (Objects.nonNull(sslContext)) {
+            closeableHttpClient = getCloseableHttpClientWithSSL(sslContext);
+        } else {
+            closeableHttpClient= getCloseableHttpClient();
+        }
+        HttpPost httpPost = new HttpPost(url);
+        httpPost.setConfig(getRequestConfig(connectTimeout, readTimeout));
+        httpPost.setEntity(new StringEntity(data, StandardCharsets.UTF_8));
+        return post(closeableHttpClient, httpPost);
+    }
+
+    public static String post(String url, String data, int connectTimeout, int readTimeout) {
+       return post(url, data, null, connectTimeout, readTimeout);
+    }
+
 
 }

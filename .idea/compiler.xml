@@ -9,5 +9,6 @@
         <module name="dohko-pay-sdk" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="8" />
   </component>
 </project>
