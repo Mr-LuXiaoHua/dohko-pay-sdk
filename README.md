@@ -26,6 +26,7 @@ System.out.println("证书内容："+ base64String);
 
 ### 使用案例
 #### 微信支付
+> 以下案例商户id、商户号、密钥均为虚构，使用时请替换
 ```java
 /**
      * 将证书转换成base64字符串
@@ -59,7 +60,7 @@ System.out.println("证书内容："+ base64String);
         reqData.put("spbill_create_ip", "127.0.0.1");
         reqData.put("notify_url", "https://127.0.0.1/notify/wechat/pay-result");
         reqData.put("trade_type", "JSAPI");
-        reqData.put("openid", "oJD444wB1XSwFhnW_AzSio5qXdIw");
+        reqData.put("openid", "oJw3de443wwB1XavFhnW_12345678");
 
         WechatPay wechatPay = new WechatPay(wechatPayConfig);
         Map<String, String> resultMap = wechatPay.unifiedOrder(reqData);
