@@ -3,6 +3,7 @@
 ---
 ### 项目进度
 + 微信支付
+    + 微信支付文档 [https://pay.weixin.qq.com/wiki/doc/api/index.html]
 
 | 微信接口           | 描述      | 对应方法             |
 | --------           | --------  | ---------------------|
@@ -22,7 +23,16 @@ System.out.println("证书内容："+ base64String);
 ```
 
 + 支付宝  
-    暂无
+    + 支付宝文档 
+        + [https://docs.open.alipay.com/api_1/]
+        + [https://docs.open.alipay.com/54/106370]
+        
+ | 支付宝接口           | 描述      | 对应方法             |
+ | --------             | --------  | ---------------------|
+ | alipay.trade.app.pay | APP支付   |  Alipay.appPay()     |
+ | alipay.trade.wap.pay | 查询订单  |  Alipay.h5Pay()      |
+
+    
     
     
 
@@ -41,7 +51,7 @@ System.out.println("证书内容："+ base64String);
     }
 
     /**
-     * 测试统一下单
+     * 微信支付-统一下单
      */
     @Test
     public void testUnifiedOrder() {
@@ -72,7 +82,7 @@ System.out.println("证书内容："+ base64String);
 
 
     /**
-     * 测试查询订单
+     * 微信支付-查询订单
      */
     @Test
     public void testQueryOrder() {
@@ -96,7 +106,7 @@ System.out.println("证书内容："+ base64String);
 
 
     /**
-     * 测试退款
+     * 微信支付-退款
      */
     @Test
     public void testRefund() {
@@ -136,7 +146,7 @@ System.out.println("证书内容："+ base64String);
 
 
     /**
-     * 测试退款查询
+     * 微信支付-退款查询
      */
     @Test
     public void testRefundQuery() {
@@ -160,7 +170,7 @@ System.out.println("证书内容："+ base64String);
     }
 
     /**
-     * 测试对账单下单
+     * 微信支付-对账单下单
      */
     @Test
     public void testDownloadBill() {
@@ -184,5 +194,60 @@ System.out.println("证书内容："+ base64String);
     }
 ```
 #### 支付宝
+> 以下的appid、公私钥为虚构，使用时请替换
+```java
+    /**
+     * 支付宝-APP支付
+     */
+    @Test
+    public void testAppPay() {
 
-    暂无
+        // 设置支付宝配置
+        AlipayConfig alipayConfig = new AlipayConfig();
+        alipayConfig.setAppId("2000000000000000");
+        alipayConfig.setCharset(AlipayConst.CHARSET_UTF8);
+        alipayConfig.setFormat(AlipayConst.FORMAT_JSON);
+        alipayConfig.setServerUrl(AlipayConst.SERVER_URL);
+        alipayConfig.setSignType(AlipayConst.SIGN_TYPE_RSA2);
+        alipayConfig.setAlipayPublicKey("MIIBIjANBgkqhki...");
+        alipayConfig.setPrivateKey("MIIEvQIBADANB...");
+        
+        Map<String, String> reqData = new HashMap<>();
+        reqData.put("totalAmount", "0.01");
+        reqData.put("subject", "测试支付宝");
+        reqData.put("outTradeNo", "2020020222460001");
+        reqData.put("notifyUrl", "https://127.0.0.1/notify/alipay/pay-result");
+
+        Alipay alipay = new Alipay(alipayConfig);
+        String orderInfo = alipay.appPay(reqData);
+        System.out.println("orderInfo:" + orderInfo);
+    }
+
+    /**
+     * 支付宝-H5支付
+     */
+    @Test
+    public void testH5Pay() {
+
+        // 设置支付宝配置
+        AlipayConfig alipayConfig = new AlipayConfig();
+        alipayConfig.setAppId("2000000000000000");
+        alipayConfig.setCharset(AlipayConst.CHARSET_UTF8);
+        alipayConfig.setFormat(AlipayConst.FORMAT_JSON);
+        alipayConfig.setServerUrl(AlipayConst.SERVER_URL);
+        alipayConfig.setSignType(AlipayConst.SIGN_TYPE_RSA2);
+        alipayConfig.setAlipayPublicKey("MIIBIjANBgkqhki...");
+        alipayConfig.setPrivateKey("MIIEvQIBADANB...");
+
+        Map<String, String> reqData = new HashMap<>();
+        reqData.put("totalAmount", "0.01");
+        reqData.put("subject", "测试支付宝");
+        reqData.put("outTradeNo", "2020020222460002");
+        reqData.put("notifyUrl", "https://127.0.0.1/notify/alipay/pay-result");
+        reqData.put("returnUrl", "https://127.0.0.1/pay-result.html");
+
+        Alipay alipay = new Alipay(alipayConfig);
+        String html = alipay.h5Pay(reqData);
+        System.out.println("html:" + html);
+    }
+```
