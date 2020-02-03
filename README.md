@@ -16,11 +16,7 @@
 微信支付有些接口需要证书才能请求，建议将证书转换成base64字符串，便于储存和容器化部署
 
 dohko-pay-sdk 支持两种方式配置微信支付证书：文件路径方式 和 Base64字符串方式
-```java
-String filePath = "E:/certs/apiclient_cert.p12";
-String base64String = IoUtils.file2Base64String(filePath);
-System.out.println("证书内容："+ base64String);
-```
+
 
 + 支付宝  
     + 支付宝文档 
@@ -30,7 +26,7 @@ System.out.println("证书内容："+ base64String);
  | 支付宝接口           | 描述      | 对应方法             |
  | --------             | --------  | ---------------------|
  | alipay.trade.app.pay | APP支付   |  Alipay.appPay()     |
- | alipay.trade.wap.pay | 查询订单  |  Alipay.h5Pay()      |
+ | alipay.trade.wap.pay | H5支付  |  Alipay.h5Pay()      |
 
     
     
