@@ -77,8 +77,8 @@ dohko-pay-sdk 支持两种方式配置微信支付证书：文件路径方式 �
                reqData.put("total_fee", "1");
                reqData.put("spbill_create_ip", "127.0.0.1");
                reqData.put("notify_url", "https://127.0.0.1/notify/wechat/pay-result");
-               reqData.put("trade_type", "JSAPI");
-               reqData.put("openid", "oJD444wB1XSwFhnW_AzSio5qXdIw");
+               reqData.put("trade_type", WechatPayConst.TradeType.JSAPI);
+               reqData.put("openid", "oJF384wBwxcrgh_AzSao6qXdew");
        
                WechatPay wechatPay = new WechatPay(wechatPayConfig);
                Map<String, String> resultMap = wechatPay.unifiedOrder(reqData);
