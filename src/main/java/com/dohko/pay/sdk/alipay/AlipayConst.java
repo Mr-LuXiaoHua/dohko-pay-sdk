@@ -13,6 +13,12 @@ public class AlipayConst {
 
     public static final String FORMAT_JSON = "json";
 
+
+    // 参考 https://docs.open.alipay.com/api_15/alipay.data.dataservice.bill.downloadurl.query
+    public static final String BILL_TYPE_TRADE = "trade";
+    public static final String BILL_TYPE_SIGNCUSTOMER = "signcustomer";
+
+
     /**
      * 销售产品码 APP支付
      */
