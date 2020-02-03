@@ -1,6 +1,7 @@
 ### dohko-pay-sdk 支付sdk,支持微信、支付宝
 > 基于微信官方SDK重构封装、支付宝SDK封装
----
+
+
 ### 项目进度
 + 微信支付
     + 微信支付文档 [https://pay.weixin.qq.com/wiki/doc/api/index.html]
@@ -16,6 +17,8 @@
 微信支付有些接口需要证书才能请求，建议将证书转换成base64字符串，便于储存和容器化部署
 
 dohko-pay-sdk 支持两种方式配置微信支付证书：文件路径方式 和 Base64字符串方式
+
+
 
 
 + 支付宝  

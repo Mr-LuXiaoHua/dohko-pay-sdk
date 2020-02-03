@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9072cf00-7839-4542-bf9a-94eafec4cc36" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -99,8 +98,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="166">
-                <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+              <first_editor relative-caret-position="286">
+                <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
                 <folding>
                   <element signature="e#0#2041#0" expanded="true" />
                 </folding>
@@ -283,7 +282,7 @@
     <property name="GO_FMT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1580695428328" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1580695872137" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="last_opened_file_path" value="D:/Program Files/Git/cmd/git.exe" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -418,7 +417,7 @@
       <workItem from="1579307545442" duration="5554000" />
       <workItem from="1579443612872" duration="4026000" />
       <workItem from="1579613782912" duration="4671000" />
-      <workItem from="1580529327714" duration="28255000" />
+      <workItem from="1580529327714" duration="28698000" />
     </task>
     <task id="LOCAL-00001" summary="微信支付接口封装">
       <created>1580547672903</created>
@@ -483,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580655453714</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="update readme">
+      <created>1580695457901</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1580695457901</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -519,7 +525,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46130000" />
+    <option name="totallyTimeSpent" value="46573000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -564,9 +570,9 @@
     <MESSAGE value="增加注释" />
     <MESSAGE value="readme.md格式" />
     <MESSAGE value="支持文件路径方式微信支付证书配置" />
-    <MESSAGE value="update readme" />
     <MESSAGE value="支付宝支付" />
-    <option name="LAST_COMMIT_MESSAGE" value="支付宝支付" />
+    <MESSAGE value="update readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="update readme" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://D:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/Objects.java">
@@ -760,8 +766,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="166">
-            <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+          <first_editor relative-caret-position="286">
+            <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
             <folding>
               <element signature="e#0#2041#0" expanded="true" />
             </folding>
