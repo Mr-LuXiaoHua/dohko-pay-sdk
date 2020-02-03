@@ -164,7 +164,7 @@ public class AlipayTest {
         // 构建请求模型
         AlipayTradeFastpayRefundQueryModel model = new AlipayTradeFastpayRefundQueryModel();
         model.setOutTradeNo("202002021293409988");
-        model.setOutRequestNo(RandomStringUtils.randomAlphanumeric(16));
+        model.setOutRequestNo(RandomStringUtils.randomNumeric(16));
 
         AlipayTradeFastpayRefundQueryRequest request = new AlipayTradeFastpayRefundQueryRequest ();
         request.setBizModel(model);
