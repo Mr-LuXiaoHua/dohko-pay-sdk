@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9072cf00-7839-4542-bf9a-94eafec4cc36" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dohko/pay/sdk/wechat/WechatPayConst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dohko/pay/sdk/wechat/WechatPayConst.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -56,23 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/dohko/pay/sdk/wechat/WechatPayConst.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-113">
-              <caret line="61" column="20" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/dohko/pay/WechatPayTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="175" column="1" lean-forward="true" selection-start-line="19" selection-end-line="175" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="30">
+              <caret line="59" column="26" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -82,6 +69,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="342">
               <caret line="18" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/dohko/pay/WechatPayTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="106">
+              <caret line="54" column="34" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -102,8 +101,8 @@
       <find>LtCSysMFHwnC9HbQUl98wk2rrDt7IyAE</find>
       <find>1554364731</find>
       <find>wxe1e65ddcb30aee74</find>
-      <find>rand</find>
       <find>RandomStringUtils</find>
+      <find>rand</find>
     </findStrings>
     <replaceStrings>
       <replace>wxabc1234567884</replace>
@@ -131,12 +130,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/dohko/pay/sdk/wechat/WechatPay.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/dohko/pay/sdk/alipay/AlipayConfig.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/dohko/pay/WechatPayTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dohko/pay/sdk/alipay/Alipay.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dohko/pay/sdk/alipay/AlipayConst.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/dohko/pay/AlipayTest.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/com/dohko/pay/sdk/wechat/WechatPayConst.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/dohko/pay/WechatPayTest.java" />
       </list>
     </option>
   </component>
@@ -214,6 +213,16 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="pay" type="462c0819:PsiDirectoryNode" />
               <item name="sdk" type="462c0819:PsiDirectoryNode" />
+              <item name="alipay" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dohko-pay-sdk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dohko-pay-sdk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pay" type="462c0819:PsiDirectoryNode" />
+              <item name="sdk" type="462c0819:PsiDirectoryNode" />
               <item name="wechat" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -261,7 +270,7 @@
     <property name="GO_FMT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1580719695135" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1580720001581" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="last_opened_file_path" value="D:/Program Files/Git/cmd/git.exe" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -396,7 +405,7 @@
       <workItem from="1579307545442" duration="5554000" />
       <workItem from="1579443612872" duration="4026000" />
       <workItem from="1579613782912" duration="4671000" />
-      <workItem from="1580529327714" duration="42026000" />
+      <workItem from="1580529327714" duration="42278000" />
     </task>
     <task id="LOCAL-00001" summary="微信支付接口封装">
       <created>1580547672903</created>
@@ -524,7 +533,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580718045932</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="微信支付trade_type字段使用常量">
+      <created>1580719840332</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1580719840332</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -560,13 +576,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59901000" />
+    <option name="totallyTimeSpent" value="60153000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2829426" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.37429264" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -610,7 +625,8 @@
     <MESSAGE value="完善支付宝接口" />
     <MESSAGE value="update" />
     <MESSAGE value="update readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="update readme" />
+    <MESSAGE value="微信支付trade_type字段使用常量" />
+    <option name="LAST_COMMIT_MESSAGE" value="微信支付trade_type字段使用常量" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://D:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/Objects.java">
@@ -774,13 +790,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/dohko/pay/WechatPayTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="175" column="1" lean-forward="true" selection-start-line="19" selection-end-line="175" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="156">
+            <caret line="394" column="12" selection-start-line="394" selection-start-column="12" selection-end-line="394" selection-end-column="12" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
@@ -794,20 +810,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="156">
-            <caret line="394" column="12" selection-start-line="394" selection-start-column="12" selection-end-line="394" selection-end-column="12" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dohko/pay/sdk/wechat/WechatPayConst.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="59" column="26" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dohko/pay/sdk/wechat/WechatPayConst.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/dohko/pay/WechatPayTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-113">
-          <caret line="61" column="20" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
+        <state relative-caret-position="106">
+          <caret line="54" column="34" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

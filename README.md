@@ -56,7 +56,7 @@ dohko-pay-sdk 支持两种方式配置微信支付证书：文件路径方式 �
            }
        
            /**
-            * 测试统一下单
+            * 微信支付-统一下单 （小程序支付、JS支付、APP支付、扫码支付）
             */
            @Test
            public void testUnifiedOrder() {
