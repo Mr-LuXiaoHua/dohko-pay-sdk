@@ -54,6 +54,27 @@ public class WechatPayConst {
     }
 
 
+    /**
+     * 支付方式
+     */
+    public class TradeType {
+        /**
+         * 小程序、JS 支付
+         */
+        public static final String JSAPI = "JSAPI";
+
+        /**
+         * NATIVE-扫码支付
+         */
+        public static final String NATIVE = "NATIVE";
+
+        /**
+         * APP支付
+         */
+        public static final String APP = "APP";
+    }
+
+
 
 
 
