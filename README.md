@@ -30,6 +30,9 @@ dohko-pay-sdk 支持两种方式配置微信支付证书：文件路径方式 �
  | --------             | --------  | ---------------------|
  | alipay.trade.app.pay | APP支付   |  Alipay.appPay()     |
  | alipay.trade.wap.pay | H5支付  |  Alipay.h5Pay()      |
+ | alipay.trade.query | 交易查询  |  Alipay.queryTrade()      |
+ | alipay.trade.refund | 退款申请  |  Alipay.refund()      |
+ | alipay.trade.fastpay.refund.query | 退款查询  |        |
 
     
     
@@ -195,58 +198,109 @@ dohko-pay-sdk 支持两种方式配置微信支付证书：文件路径方式 �
 #### 支付宝
 > 以下的appid、公私钥为虚构，使用时请替换
 ```java
-    /**
-     * 支付宝-APP支付
-     */
-    @Test
-    public void testAppPay() {
-
-        // 设置支付宝配置
-        AlipayConfig alipayConfig = new AlipayConfig();
-        alipayConfig.setAppId("2000000000000000");
-        alipayConfig.setCharset(AlipayConst.CHARSET_UTF8);
-        alipayConfig.setFormat(AlipayConst.FORMAT_JSON);
-        alipayConfig.setServerUrl(AlipayConst.SERVER_URL);
-        alipayConfig.setSignType(AlipayConst.SIGN_TYPE_RSA2);
-        alipayConfig.setAlipayPublicKey("MIIBIjANBgkqhki...");
-        alipayConfig.setPrivateKey("MIIEvQIBADANB...");
-        
-        Map<String, String> reqData = new HashMap<>();
-        reqData.put("totalAmount", "0.01");
-        reqData.put("subject", "测试支付宝");
-        reqData.put("outTradeNo", "2020020222460001");
-        reqData.put("notifyUrl", "https://127.0.0.1/notify/alipay/pay-result");
-
-        Alipay alipay = new Alipay(alipayConfig);
-        String orderInfo = alipay.appPay(reqData);
-        System.out.println("orderInfo:" + orderInfo);
-    }
-
-    /**
-     * 支付宝-H5支付
-     */
-    @Test
-    public void testH5Pay() {
-
-        // 设置支付宝配置
-        AlipayConfig alipayConfig = new AlipayConfig();
-        alipayConfig.setAppId("2000000000000000");
-        alipayConfig.setCharset(AlipayConst.CHARSET_UTF8);
-        alipayConfig.setFormat(AlipayConst.FORMAT_JSON);
-        alipayConfig.setServerUrl(AlipayConst.SERVER_URL);
-        alipayConfig.setSignType(AlipayConst.SIGN_TYPE_RSA2);
-        alipayConfig.setAlipayPublicKey("MIIBIjANBgkqhki...");
-        alipayConfig.setPrivateKey("MIIEvQIBADANB...");
-
-        Map<String, String> reqData = new HashMap<>();
-        reqData.put("totalAmount", "0.01");
-        reqData.put("subject", "测试支付宝");
-        reqData.put("outTradeNo", "2020020222460002");
-        reqData.put("notifyUrl", "https://127.0.0.1/notify/alipay/pay-result");
-        reqData.put("returnUrl", "https://127.0.0.1/pay-result.html");
-
-        Alipay alipay = new Alipay(alipayConfig);
-        String html = alipay.h5Pay(reqData);
-        System.out.println("html:" + html);
-    }
+        /**
+        * 测试APP支付
+        */
+       @Test
+       public void testAppPay() {
+   
+           // 设置支付宝配置
+           AlipayConfig alipayConfig = new AlipayConfig();
+           alipayConfig.setAppId("200000000000000");
+           alipayConfig.setCharset(AlipayConst.CHARSET_UTF8);
+           alipayConfig.setFormat(AlipayConst.FORMAT_JSON);
+           alipayConfig.setServerUrl(AlipayConst.SERVER_URL);
+           alipayConfig.setSignType(AlipayConst.SIGN_TYPE_RSA2);
+           alipayConfig.setAlipayPublicKey("MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8...");
+           alipayConfig.setPrivateKey("MIIEvQIBADAN...");
+   
+           Map<String, String> reqData = new HashMap<>();
+           reqData.put("totalAmount", "0.01");
+           reqData.put("subject", "测试支付宝");
+           reqData.put("outTradeNo", "2020020222460001");
+           reqData.put("notifyUrl", "https://127.0.0.1/notify/alipay/pay-result");
+   
+           Alipay alipay = new Alipay(alipayConfig);
+           String orderInfo = alipay.appPay(reqData);
+           System.out.println("orderInfo:" + orderInfo);
+       }
+   
+       /**
+        * 测试H5支付
+        */
+       @Test
+       public void testH5Pay() {
+   
+           // 设置支付宝配置
+           AlipayConfig alipayConfig = new AlipayConfig();
+           alipayConfig.setAppId("200000000000000");
+           alipayConfig.setCharset(AlipayConst.CHARSET_UTF8);
+           alipayConfig.setFormat(AlipayConst.FORMAT_JSON);
+           alipayConfig.setServerUrl(AlipayConst.SERVER_URL);
+           alipayConfig.setSignType(AlipayConst.SIGN_TYPE_RSA2);
+           alipayConfig.setAlipayPublicKey("MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8...");
+           alipayConfig.setPrivateKey("MIIEvQIBADAN...");
+   
+           Map<String, String> reqData = new HashMap<>();
+           reqData.put("totalAmount", "0.01");
+           reqData.put("subject", "测试支付宝");
+           reqData.put("outTradeNo", "2020020222460002");
+           reqData.put("notifyUrl", "https://127.0.0.1/notify/alipay/pay-result");
+           reqData.put("returnUrl", "https://127.0.0.1/pay-result.html");
+   
+           Alipay alipay = new Alipay(alipayConfig);
+           String html = alipay.h5Pay(reqData);
+           System.out.println("html:" + html);
+       }
+   
+       /**
+        * 支付宝-退款申请
+        */
+       @Test
+       public void testRefund() {
+   
+           // 设置支付宝配置
+           AlipayConfig alipayConfig = new AlipayConfig();
+           alipayConfig.setAppId("200000000000000");
+           alipayConfig.setCharset(AlipayConst.CHARSET_UTF8);
+           alipayConfig.setFormat(AlipayConst.FORMAT_JSON);
+           alipayConfig.setServerUrl(AlipayConst.SERVER_URL);
+           alipayConfig.setSignType(AlipayConst.SIGN_TYPE_RSA2);
+           alipayConfig.setAlipayPublicKey("MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8...");
+           alipayConfig.setPrivateKey("MIIEvQIBADAN...");
+   
+           Map<String, String> reqData = new HashMap<>();
+           reqData.put("outTradeNo", "2020020222460002");
+           reqData.put("refundAmount", "0.01");
+           reqData.put("refundReason", "商品无货退款");
+   
+           Alipay alipay = new Alipay(alipayConfig);
+           String tradeNo = alipay.refund(reqData);
+           System.out.println("tradeNo:" + tradeNo);
+       }
+   
+   
+       /**
+        * 支付查询
+        */
+       @Test
+       public void testQueryTrade() {
+   
+           // 设置支付宝配置
+           AlipayConfig alipayConfig = new AlipayConfig();
+           alipayConfig.setAppId("200000000000000");
+           alipayConfig.setCharset(AlipayConst.CHARSET_UTF8);
+           alipayConfig.setFormat(AlipayConst.FORMAT_JSON);
+           alipayConfig.setServerUrl(AlipayConst.SERVER_URL);
+           alipayConfig.setSignType(AlipayConst.SIGN_TYPE_RSA2);
+           alipayConfig.setAlipayPublicKey("MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8...");
+           alipayConfig.setPrivateKey("MIIEvQIBADAN...");
+   
+           Map<String, String> reqData = new HashMap<>();
+           reqData.put("outTradeNo", "2020020222460002");
+   
+           Alipay alipay = new Alipay(alipayConfig);
+           String tradeStatus = alipay.queryTrade(reqData);
+           System.out.println("tradeStatus:" + tradeStatus);
+       }
 ```
