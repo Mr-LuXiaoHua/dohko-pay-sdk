@@ -22,13 +22,13 @@ public class AlipayTest {
 
         // 设置支付宝配置
         AlipayConfig alipayConfig = new AlipayConfig();
-        alipayConfig.setAppId("200000000000000");
+        alipayConfig.setAppId("应用id");
         alipayConfig.setCharset(AlipayConst.CHARSET_UTF8);
         alipayConfig.setFormat(AlipayConst.FORMAT_JSON);
         alipayConfig.setServerUrl(AlipayConst.SERVER_URL);
         alipayConfig.setSignType(AlipayConst.SIGN_TYPE_RSA2);
-        alipayConfig.setAlipayPublicKey("MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8...");
-        alipayConfig.setPrivateKey("MIIEvQIBADAN...");
+        alipayConfig.setAlipayPublicKey("支付宝公钥");
+        alipayConfig.setPrivateKey("应用私钥");
 
         Map<String, String> reqData = new HashMap<>();
         reqData.put("totalAmount", "0.01");
@@ -49,13 +49,13 @@ public class AlipayTest {
 
         // 设置支付宝配置
         AlipayConfig alipayConfig = new AlipayConfig();
-        alipayConfig.setAppId("200000000000000");
+        alipayConfig.setAppId("应用id");
         alipayConfig.setCharset(AlipayConst.CHARSET_UTF8);
         alipayConfig.setFormat(AlipayConst.FORMAT_JSON);
         alipayConfig.setServerUrl(AlipayConst.SERVER_URL);
         alipayConfig.setSignType(AlipayConst.SIGN_TYPE_RSA2);
-        alipayConfig.setAlipayPublicKey("MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8...");
-        alipayConfig.setPrivateKey("MIIEvQIBADAN...");
+        alipayConfig.setAlipayPublicKey("支付宝公钥");
+        alipayConfig.setPrivateKey("应用私钥");
 
         Map<String, String> reqData = new HashMap<>();
         reqData.put("totalAmount", "0.01");
@@ -77,13 +77,13 @@ public class AlipayTest {
 
         // 设置支付宝配置
         AlipayConfig alipayConfig = new AlipayConfig();
-        alipayConfig.setAppId("200000000000000");
+        alipayConfig.setAppId("应用id");
         alipayConfig.setCharset(AlipayConst.CHARSET_UTF8);
         alipayConfig.setFormat(AlipayConst.FORMAT_JSON);
         alipayConfig.setServerUrl(AlipayConst.SERVER_URL);
         alipayConfig.setSignType(AlipayConst.SIGN_TYPE_RSA2);
-        alipayConfig.setAlipayPublicKey("MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8...");
-        alipayConfig.setPrivateKey("MIIEvQIBADAN...");
+        alipayConfig.setAlipayPublicKey("支付宝公钥");
+        alipayConfig.setPrivateKey("应用私钥");
 
         Map<String, String> reqData = new HashMap<>();
         reqData.put("outTradeNo", "2020020222460002");
@@ -104,13 +104,13 @@ public class AlipayTest {
 
         // 设置支付宝配置
         AlipayConfig alipayConfig = new AlipayConfig();
-        alipayConfig.setAppId("200000000000000");
+        alipayConfig.setAppId("应用id");
         alipayConfig.setCharset(AlipayConst.CHARSET_UTF8);
         alipayConfig.setFormat(AlipayConst.FORMAT_JSON);
         alipayConfig.setServerUrl(AlipayConst.SERVER_URL);
         alipayConfig.setSignType(AlipayConst.SIGN_TYPE_RSA2);
-        alipayConfig.setAlipayPublicKey("MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8...");
-        alipayConfig.setPrivateKey("MIIEvQIBADAN...");
+        alipayConfig.setAlipayPublicKey("支付宝公钥");
+        alipayConfig.setPrivateKey("应用私钥");
 
         Map<String, String> reqData = new HashMap<>();
         reqData.put("outTradeNo", "2020020222460002");
