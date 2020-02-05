@@ -59,7 +59,7 @@ public class WechatPayConst {
      */
     public class TradeType {
         /**
-         * 小程序、JS 支付
+         * 小程序或JSAPI
          */
         public static final String JSAPI = "JSAPI";
 
@@ -72,6 +72,11 @@ public class WechatPayConst {
          * APP支付
          */
         public static final String APP = "APP";
+
+        /**
+         * H5支付 用户在微信浏览器之外的手机浏览器请求微信支付的场景 唤起微信支付
+         */
+        public static final String MWEB = "MWEB";
     }
 
 
