@@ -96,7 +96,7 @@ public class WechatPayTest {
         wechatPayConfig.setAppId("应用id");
         wechatPayConfig.setApiKey("应用API-KEY");
         wechatPayConfig.setMchId("商户id");
-        wechatPayConfig.setCertPassword("1512345678");
+        wechatPayConfig.setCertPassword("证书密码");
 
         /**
          * 证书设置
